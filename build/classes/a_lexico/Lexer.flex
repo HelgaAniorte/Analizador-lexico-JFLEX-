@@ -20,10 +20,13 @@ public String lexeme;
 "/" {return DIV;}
 "(" {return PARENTESIS_ABIERTO;}
 ")" {return PARENTESIS_CERRADO;}
+">" {return MAYOR;}
+"<" {return MENOR;}
 "[" {return CORCHETE_ABIERTO;}
 "]" {return CORCHETE_CERRADO;}
 "{" {return LLAVE_ABIERTA;}
 "}" {return LLAVE_CERRADA;}
+";" {return PUNTO_Y_COMA;}
 "while" {return PALABRA_RESERVADA;}
 "if" {return PALABRA_RESERVADA;}
 "for" {return PALABRA_RESERVADA;}

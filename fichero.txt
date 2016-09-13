@@ -1,4 +1,1 @@
-while
-a + 4 
-if
-for
+<>;
