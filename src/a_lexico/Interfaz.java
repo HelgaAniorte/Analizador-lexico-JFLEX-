@@ -192,7 +192,7 @@ public class Interfaz extends javax.swing.JFrame {
         while(true){
             Token token = lexer.yylex();
             if(token == null){
-                resultado = resultado + "EOF";
+                resultado = resultado + "END OF FILE";
                 jTextArea1.setText(resultado);
                 return;
             }
@@ -201,10 +201,10 @@ public class Interfaz extends javax.swing.JFrame {
                     resultado = resultado + "Error, simbolo no reconocido\n";
                     break;
                 case ID: case INT:
-                    resultado = resultado + "Token" + token + " " + lexer.lexeme + "\n"; 
+                    resultado = resultado + "Token " + token + " " + lexer.lexeme + "\n"; 
                     break;
                 default:
-                    resultado = resultado + "Token" + token + "\n";
+                    resultado = resultado + "Token " + token + "\n";
             }      
             
         }

@@ -22,6 +22,8 @@ public String lexeme;
 ")" {return PARENTESIS_CERRADO;}
 "[" {return CORCHETE_ABIERTO;}
 "]" {return CORCHETE_CERRADO;}
+"{" {return LLAVE_ABIERTA;}
+"}" {return LLAVE_CERRADA;}
 "while" {return PALABRA_RESERVADA;}
 "if" {return PALABRA_RESERVADA;}
 "for" {return PALABRA_RESERVADA;}
