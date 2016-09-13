@@ -9,7 +9,7 @@ import java.io.File;
 public class Analisis_lexico {
 
     public static void main(String[] args) {
-        String path = "C:/Users/Leonardo/Documents/ESIME 4/analisis numerico/JavaApplication29/src/a_lexico/Lexer.flex";
+        String path = "C:/Users/Leonardo/Documents/esime 5/compiladores/JavaApplication29/src/a_lexico/Lexer.flex";
         generarLexer(path);
     }
     
