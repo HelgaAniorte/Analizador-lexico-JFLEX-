@@ -14,6 +14,8 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.Reader;
 import java.util.logging.Level;
+import javax.swing.JFileChooser;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -27,7 +29,10 @@ public class Interfaz extends javax.swing.JFrame {
     public Interfaz() {
         initComponents();
     }
-
+    JFileChooser buscador = new JFileChooser();
+    String path = "fichero.txt";
+    File fichero; 
+    Reader reader;
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -52,6 +57,7 @@ public class Interfaz extends javax.swing.JFrame {
         jMenu2 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(153, 153, 255));
 
         jLabel1.setText("Ingresar Texto");
 
@@ -61,6 +67,7 @@ public class Interfaz extends javax.swing.JFrame {
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
 
+        jButton1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Leonardo\\Documents\\esime 5\\compiladores\\JavaApplication29\\imagenes\\boton-de-reproducir.png")); // NOI18N
         jButton1.setText("Analizar");
         jButton1.setToolTipText("Analizar el texto ");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -75,7 +82,9 @@ public class Interfaz extends javax.swing.JFrame {
 
         jMenu1.setText("File");
 
+        jMenuItem1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Leonardo\\Documents\\esime 5\\compiladores\\JavaApplication29\\imagenes\\web.png")); // NOI18N
         jMenuItem1.setText("Abrir");
+        jMenuItem1.setToolTipText("Abrir un archivo de texto");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem1ActionPerformed(evt);
@@ -83,6 +92,7 @@ public class Interfaz extends javax.swing.JFrame {
         });
         jMenu1.add(jMenuItem1);
 
+        jMenuItem2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Leonardo\\Documents\\esime 5\\compiladores\\JavaApplication29\\imagenes\\boton-de-reproducir.png")); // NOI18N
         jMenuItem2.setText("Analizar ");
         jMenuItem2.setToolTipText("Analizar el texto");
         jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
@@ -124,7 +134,7 @@ public class Interfaz extends javax.swing.JFrame {
                 .addGap(16, 16, 16)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 182, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addComponent(jButton1)
                 .addGap(11, 11, 11)
@@ -146,7 +156,21 @@ public class Interfaz extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-        // TODO add your handling code here:
+       buscador.showOpenDialog(buscador);
+        try{
+           path = buscador.getSelectedFile().getAbsolutePath();
+           fichero = new File(path);
+           BufferedReader leer = new BufferedReader(new FileReader(path));
+           String texto = leer.readLine();
+           jTextArea2.setText("");
+           while(texto != null){
+               jTextArea2.append(texto + "\n");
+               texto = leer.readLine();
+           }
+       }catch(Exception e){
+          JOptionPane a = new JOptionPane("No se pudo abrir el archvo" + e.getMessage());
+       }
+        
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
@@ -162,7 +186,7 @@ public class Interfaz extends javax.swing.JFrame {
      */
     
     public void probarLexerFile() throws IOException{
-        File fichero  = new File("fichero.txt");
+        fichero  = new File(path);
         PrintWriter writer;
         
         try{
@@ -173,7 +197,7 @@ public class Interfaz extends javax.swing.JFrame {
             
         }
         
-        Reader reader = new BufferedReader(new FileReader("fichero.txt"));
+        reader = new BufferedReader(new FileReader(path));
         Lexer lexer = new Lexer(reader);
         
         String resultado = "";
