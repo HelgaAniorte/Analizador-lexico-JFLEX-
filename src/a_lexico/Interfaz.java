@@ -19,7 +19,7 @@ public class Interfaz extends javax.swing.JFrame {
     public Interfaz() {
         initComponents();
         jButton1.setMnemonic(KeyEvent.VK_A);
-        jMenuItem1.setMnemonic(KeyEvent.VK_N);
+        jMenu1.setMnemonic(KeyEvent.VK_N);
     }
     JFileChooser buscador = new JFileChooser();
     String path = "fichero.txt";
@@ -171,6 +171,7 @@ public class Interfaz extends javax.swing.JFrame {
     
     public void probarLexerFile() throws IOException{
         fichero  = new File(path);
+        /*
         PrintWriter writer;
         
         try{
@@ -180,7 +181,7 @@ public class Interfaz extends javax.swing.JFrame {
         }catch(FileNotFoundException e){
             
         }
-        
+        */
         reader = new BufferedReader(new FileReader(path));
         Lexer lexer = new Lexer(reader);
         
