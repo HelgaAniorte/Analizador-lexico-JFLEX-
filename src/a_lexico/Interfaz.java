@@ -69,7 +69,7 @@ public class Interfaz extends javax.swing.JFrame {
         jMenu1.setText("File");
 
         jMenuItem1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Leonardo\\Documents\\esime 5\\compiladores\\JavaApplication29\\imagenes\\web.png")); // NOI18N
-        jMenuItem1.setText("Abrir");
+        jMenuItem1.setText("Abrir ALT+N");
         jMenuItem1.setToolTipText("Abrir un archivo de texto");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -79,7 +79,7 @@ public class Interfaz extends javax.swing.JFrame {
         jMenu1.add(jMenuItem1);
 
         jMenuItem2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Leonardo\\Documents\\esime 5\\compiladores\\JavaApplication29\\imagenes\\boton-de-reproducir.png")); // NOI18N
-        jMenuItem2.setText("Analizar ");
+        jMenuItem2.setText("Analizar  ALT+A");
         jMenuItem2.setToolTipText("Analizar el texto");
         jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

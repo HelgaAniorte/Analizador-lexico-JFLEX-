@@ -16,7 +16,7 @@
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="2" name="C:\Users\Leonardo\Documents\esime 5\compiladores\JavaApplication29\imagenes\web.png"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Abrir"/>
+                <Property name="text" type="java.lang.String" value="Abrir ALT+N"/>
                 <Property name="toolTipText" type="java.lang.String" value="Abrir un archivo de texto"/>
               </Properties>
               <Events>
@@ -28,7 +28,7 @@
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="2" name="C:\Users\Leonardo\Documents\esime 5\compiladores\JavaApplication29\imagenes\boton-de-reproducir.png"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Analizar "/>
+                <Property name="text" type="java.lang.String" value="Analizar  ALT+A"/>
                 <Property name="toolTipText" type="java.lang.String" value="Analizar el texto"/>
               </Properties>
               <Events>
