@@ -19,6 +19,7 @@ public class Interfaz extends javax.swing.JFrame {
     public Interfaz() {
         initComponents();
         jButton1.setMnemonic(KeyEvent.VK_A);
+        jMenuItem1.setMnemonic(KeyEvent.VK_N);
     }
     JFileChooser buscador = new JFileChooser();
     String path = "fichero.txt";
