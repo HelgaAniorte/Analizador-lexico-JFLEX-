@@ -1,0 +1,5 @@
+while (a !=b ){
+	si( b == 0){
+		imprime('b es 0');
+	}
+}
